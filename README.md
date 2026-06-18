@@ -9,6 +9,10 @@ git clone https://github.com/dani-ode/windows-explorer.git
 
 ```
 
+```bash
+cd windows_explorer
+```
+
 ### 2. Konfigurasi Database PostgreSQL
 
 Buka aplikasi manajemen database kamu (seperti pgAdmin, DBeaver, atau via CLI).
@@ -16,7 +20,7 @@ Buka aplikasi manajemen database kamu (seperti pgAdmin, DBeaver, atau via CLI).
 Buat database baru dengan nama:
 
 ```bash
-cd windows_explorer
+windows_explorer
 ```
 
 Buat file bernama `.env` di dalam folder apps/backend/ tersebut dan isi dengan string koneksi database kamu. Contoh:
