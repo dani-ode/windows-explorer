@@ -16,7 +16,7 @@ Buka aplikasi manajemen database kamu (seperti pgAdmin, DBeaver, atau via CLI).
 Buat database baru dengan nama:
 
 ```bash
-windows_explorer
+cd windows_explorer
 ```
 
 Buat file bernama `.env` di dalam folder apps/backend/ tersebut dan isi dengan string koneksi database kamu. Contoh:
