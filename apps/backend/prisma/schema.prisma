@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/client" // Required: Define your custom output path
+}
+
+datasource db {
+  provider = "postgresql"
+  // Note: url = env("DATABASE_URL") is REMOVED from here in Prisma 7
+}
+
+model Folder {
+  id        String   @id @default(uuid())
+  name      String
+  path      String
+  icon      String   @default("folder")
+  parentId  String?
+  createdAt DateTime @default(now())
+
+  parent Folder? @relation( "FolderChildren", fields: [parentId], references: [id], onDelete: Cascade )
+
+  children Folder[] @relation("FolderChildren")
+
+  files File[]
+
+  @@index([parentId])
+  @@index([path])
+  @@index([name])
+}
+
+model File {
+  id            String   @id @default(uuid())
+
+  name          String
+  storedName    String
+
+  extension     String?
+  mimeType      String?
+
+  path          String
+  storagePath   String
+
+  folderId       String
+  size           Int
+  icon           String @default("file")
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  folder Folder @relation( fields: [folderId], references: [id], onDelete: Cascade )
+
+  @@index([folderId])
+  @@index([path])
+  @@index([name])
+}
