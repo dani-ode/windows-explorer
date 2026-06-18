@@ -5,8 +5,7 @@
 Buka terminal kamu dan jalankan perintah berikut untuk mengunduh proyek:
 
 ```bash
-git clone [https://github.com/username/windows-explorer.git](https://github.com/username/windows-explorer.git)
-cd windows-explorer
+git clone https://github.com/dani-ode/windows-explorer.git
 
 ```
 
