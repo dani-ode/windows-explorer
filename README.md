@@ -62,6 +62,12 @@ Dari direktory utama, pindah ke direktori frontend dari root proyek:
 cd apps/frontend
 ```
 
+Buat file `.env.development` yang isinya
+
+```bash
+VITE_API_URL=/api
+```
+
 Install seluruh dependensi frontend menggunakan Bun:
 
 ```bash
