@@ -29,9 +29,7 @@ const visibleItems = computed(() => {
         @contextmenu.prevent.stop="menuStore.openItemMenu($event, item)"
       >
         <div class="folder-icon">
-          <template v-if="item.type === 'folder' || item.icon === 'folder'">
-            📁
-          </template>
+          <template v-if="item.type === 'folder'"> 📁 </template>
 
           <template
             v-else-if="

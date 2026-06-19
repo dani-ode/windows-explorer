@@ -103,6 +103,18 @@ export const useFolderStore = defineStore("folder", () => {
     searchStore.clear();
   }
 
+  async function selectFolderById(id: string) {
+    const folder = {
+      id,
+      name: "",
+      type: "folder" as const,
+      parentId: null,
+      path: "",
+    };
+
+    await selectFolder(folder);
+  }
+
   async function goBack() {
     const previous = history.value.pop();
 
@@ -255,6 +267,7 @@ export const useFolderStore = defineStore("folder", () => {
 
     init,
     selectFolder,
+    selectFolderById,
     toggleFolder,
     goBack,
 

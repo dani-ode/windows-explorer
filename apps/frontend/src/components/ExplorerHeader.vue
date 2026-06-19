@@ -22,7 +22,7 @@ const searchStore = useSearchStore();
       <span class="crumb">/</span>
 
       <template v-for="(item, index) in folderStore.breadcrumb" :key="item.id">
-        <span class="crumb" @click="folderStore.selectFolder(item)">
+        <span class="crumb" @click="folderStore.selectFolderById(item.id)">
           {{ item.name }}
         </span>
 
