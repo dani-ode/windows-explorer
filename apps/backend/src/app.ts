@@ -12,6 +12,6 @@ export const app = new Elysia()
   .use(searchRoute)
   .use(fileRoute)
   .use(staticPlugin())
-  .get("/health", () => ({
+  .get("/api/v1/health", () => ({
     success: true,
   }));
