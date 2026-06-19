@@ -6,7 +6,7 @@ link demo :
 https://windows-explorer.daniode.com/
 ```
 
-Catatan: karena subdomain baru, jika link tidak bisa dikunjungi, coba ubah DNS PC anda menjadi `1.1.1.1` alternate DNS `8.8.8.8`
+Catatan: karena subdomain baru, jika link tidak bisa dikunjungi, coba ubah DNS PC anda menjadi `1.1.1.1` dan alternate DNS `8.8.8.8`
 
 ### 1. Kloning Repositori (Git Clone)
 
